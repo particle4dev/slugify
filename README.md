@@ -21,7 +21,7 @@ yarn add @penguin-ui/slugify
 ```js
 const slugify = require('@penguin-ui/slugify')
 
-console.log(unaccented(`a    b c`))
+console.log(slugify(`a    b c`))
 // print "a-b-c"
 ```
 
