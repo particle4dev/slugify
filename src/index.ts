@@ -1,29 +1,15 @@
-export default function aspectRatio(val: number, lim: number = 50): number[] {
-  let lower = [0, 1]
-  let upper = [1, 0]
+// https://gist.github.com/codeguy/6684588
 
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const mediant = [lower[0] + upper[0], lower[1] + upper[1]]
+import unaccented from '@penguin-ui/unaccented'
 
-    if (val * mediant[1] > mediant[0]) {
-      if (lim < mediant[1]) {
-        return upper
-      }
-      lower = mediant
-    } else if (val * mediant[1] === mediant[0]) {
-      if (lim >= mediant[1]) {
-        return mediant
-      }
-      if (lower[1] < upper[1]) {
-        return lower
-      }
-      return upper
-    } else {
-      if (lim < mediant[1]) {
-        return lower
-      }
-      upper = mediant
-    }
-  }
+export default function stringToSlug(str: string): string {
+  str = str.replace(/^\s+|\s+$/g, '') // trim
+  str = str.toLowerCase()
+
+  str = unaccented(str)
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+    .replace(/-+/g, '-') // collapse dashes
+
+  return str
 }

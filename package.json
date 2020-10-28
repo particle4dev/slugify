@@ -40,5 +40,8 @@
   },
   "peerDependencies": {
     "lodash": "^4.17.15"
+  },
+  "dependencies": {
+    "@penguin-ui/unaccented": "^1.2.0"
   }
 }
