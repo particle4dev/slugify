@@ -1,6 +1,6 @@
 # @penguin-ui/slugify
 
-<a href="https://npmjs.org/package/@penguin-ui/unaccented"><img alt="NPM version" src="https://img.shields.io/npm/v/@penguin-ui/unaccented.svg" /></a> [![Coverage Status](https://coveralls.io/repos/github/particle4dev/unaccented/badge.svg?branch=master)](https://coveralls.io/github/particle4dev/unaccented?branch=master)
+<a href="https://npmjs.org/package/@penguin-ui/slugify"><img alt="NPM version" src="https://img.shields.io/npm/v/@penguin-ui/slugify.svg" /></a> [![Coverage Status](https://coveralls.io/repos/github/particle4dev/slugify/badge.svg?branch=master)](https://coveralls.io/github/particle4dev/slugify?branch=master)
 
 Convert vietnamese string to unaccented string.
 
